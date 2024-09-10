@@ -16,29 +16,31 @@ const Review = ({ prevStep, formData, submitForm }) => {
                 <div className="sep"></div>
                 <div className='step'><li className={`${isStep4 && 'step4'} circle ${step4Completed && 'step4Completed'}`}>4</li><p className='name'>Review</p></div>
             </div>
-            <h2>Review Your Details</h2>
             <div className="review">
-                <div>
-                    <h3>Personal Details</h3>
-                    <p>Name: {formData.name}</p>
-                    <p>Email: {formData.email}</p>
+                <h2>Review Your Details</h2>
+                <div className='reviewContent'>
+                    <div>
+                        <h3>Personal Details</h3>
+                        <p>Name: {formData.name}</p>
+                        <p>Email: {formData.email}</p>
+                    </div>
+                    <div>
+                        <h3>Address</h3>
+                        <p>Street: {formData.street}</p>
+                        <p>City: {formData.city}</p>
+                        <p>Zip Code: {formData.zipCode}</p>
+                    </div>
+                    <div>
+                        <h3>Payment Details</h3>
+                        <p>Card Number: {formData.cardNumber}</p>
+                        <p>Expiration Date: {formData.expirationDate}</p>
+                        <p>CVV: {formData.cvv}</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>Address</h3>
-                    <p>Street: {formData.street}</p>
-                    <p>City: {formData.city}</p>
-                    <p>Zip Code: {formData.zipCode}</p>
+                <div className="reviewButtons">
+                    <button onClick={prevStep}>Prev</button>
+                    <button onClick={submitForm}>Submit</button>
                 </div>
-                <div>
-                    <h3>Payment Details</h3>
-                    <p>Card Number: {formData.cardNumber}</p>
-                    <p>Expiration Date: {formData.expirationDate}</p>
-                    <p>CVV: {formData.cvv}</p>
-                </div>
-            </div>
-            <div className="reviewButtons">
-                <button onClick={prevStep}>Prev</button>
-                <button onClick={submitForm}>Submit</button>
             </div>
         </div>
     );

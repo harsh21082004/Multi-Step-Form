@@ -14,7 +14,9 @@
 
 .review{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     width: 60%;
     margin: 20px 0;
 }
@@ -30,8 +32,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #ffffff;
     color: #5f5f5f;
@@ -52,7 +54,7 @@
 }
 
 .name{
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
     color: #0d3c48;
 }
@@ -68,7 +70,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 40px;
     height: 1.5px;
     border-radius: 1px;
     background-color: #0d3c48;
@@ -148,4 +150,34 @@
     color: #d9534f;
     font-size: 14px;
     margin-top: 5px;
+}
+
+
+@media screen and (max-width:700px) {
+    .form{
+        flex-direction: row;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .steps{
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .step{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sep{
+        height: 40px;
+        width: 1.5px;
+        margin: 10px 0;
+    }
+
+    .form form .buttons button, .form .reviewButtons button{
+        padding: 12px 10px;
+    }
 }
